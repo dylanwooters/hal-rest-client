@@ -18,7 +18,7 @@
     "url": "http://github.com/deblockt/hal-rest-client/issues"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.22.0",
     "reflect-metadata": "^0.1.9",
     "uri-templates": "^0.1.9"
   },
@@ -41,7 +41,7 @@
     "coverage": "istanbul cover node_modules/tape/bin/tape dist/test/*.js; remap-istanbul -i coverage/coverage.json -o html-report -t html",
     "test": "tsc && tape dist/test/*.js | tap-spec",
     "coveralls": "remap-istanbul -i coverage/coverage.json -t lcovonly | coveralls",
-    "compile": "tsc",
+    "prepare": "tsc",
     "lint": "tslint \"src/**/*.ts\" --project tsconfig.json --type-check"
   }
 }
