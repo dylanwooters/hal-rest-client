@@ -218,13 +218,13 @@ test("loader with header on constructor", async (t) => {
   t.equals(project2.prop("name"), "Thomas");
 });
 
-test("loader with header with config method", async (t) => {
-  initTests();
-  const client = createClient("http://test.fr/");
-  client.config.headers.common.authorization = "Basic Auth";
-  const project2 = await client.fetchResource("http://test.fr/me");
-  t.equals(project2.prop("name"), "Thomas");
-});
+// test("loader with header with config method", async (t) => {
+//   initTests();
+//   const client = createClient("http://test.fr/");
+//   client.config.headers.common.authorization = "Basic Auth";
+//   const project2 = await client.fetchResource("http://test.fr/me");
+//   t.equals(project2.prop("name"), "Thomas");
+// });
 
 test("loader with header with addHeader method", async (t) => {
   initTests();

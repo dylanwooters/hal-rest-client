@@ -54,7 +54,7 @@ export class HalRestClient {
    */
   public fetchArray<T extends IHalResource>(resourceURI: string, c: IHalResourceConstructor<T>): Promise<T[]> {
     return new Promise((resolve, reject) => {
-      this.axios.get(resourceURI).then((value) => {
+      this.axios.get<any>(resourceURI).then((value) => {
         let array;
         if (!Array.isArray(value.data)) {
           if ("_embedded" in value.data) {
@@ -199,7 +199,7 @@ export class HalRestClient {
    */
   private resolveUnknowTypeReturn(
     resolve: (data?) => void,
-    value: AxiosResponse,
+    value: AxiosResponse<any>,
     type ?: IHalResourceConstructor<any>,
     fetchedURI?: string,
   ) {

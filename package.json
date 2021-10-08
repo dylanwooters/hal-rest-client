@@ -35,7 +35,7 @@
     "tape": "^4.6.3",
     "tape-async": "^2.1.1",
     "tslint": "^4.5.1",
-    "typescript": "^2.2.1"
+    "typescript": "^2.9.2"
   },
   "scripts": {
     "coverage": "istanbul cover node_modules/tape/bin/tape dist/test/*.js; remap-istanbul -i coverage/coverage.json -o html-report -t html",
